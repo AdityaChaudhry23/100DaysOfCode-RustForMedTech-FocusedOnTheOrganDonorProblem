@@ -29,5 +29,12 @@
 - Up to **one “micro-day” per week** (≥15 minutes) still counts if I write a TIL note and push something meaningful.
 - I must **state the reason** for the exception in `docs/progress.md`, and **make up for it the next day** (e.g., a longer session or an extra completed exercise/commit).
 
-## Day 1 : 20 August 2025
+## Day 1 — 20 August 2025
+
+### What I did today
+- Started with *The Rust Programming Language* (Rust book).
+- Learned how to create, build, and run projects using Cargo.
+- Completed the **Guessing Game** from the Rust book (practice with input handling, loops, and comparisons).
+- Built a **Git automation** tool following this tutorial: [Git Automation Tutorial](https://www.youtube.com/watch?v=nVSZFjImhRk).
+- Built a **release** binary and can now run the automation script from anywhere in my project.
 
