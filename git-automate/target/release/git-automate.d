@@ -1,0 +1,1 @@
+/home/aditya_chaudhry/Desktop/100DaysOfCode-RustForMedTech-FocusedOnTheOrganDonorProblem/git-automate/target/release/git-automate: /home/aditya_chaudhry/Desktop/100DaysOfCode-RustForMedTech-FocusedOnTheOrganDonorProblem/git-automate/src/main.rs
