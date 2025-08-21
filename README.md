@@ -38,3 +38,31 @@
 - Built a **Git automation** tool following this tutorial: [Git Automation Tutorial](https://www.youtube.com/watch?v=nVSZFjImhRk).
 - Built a **release** binary and can now run the automation script from anywhere in my project.
 
+## Day 2 — 21 August 2025
+
+### What I did today
+- Reviewed fundamentals (felt comfortable).
+- Studied **Ownership** and **Borrow Checking** — still new, so I’ll practice with **Rust by Example** and **Rustlings** tomorrow.
+- Built a **CSV Reader** in Rust following this tutorial:[Rust CSV Reader](https://www.youtube.com/watch?v=VQ5cXoAMHQI)
+- Picked CSV because it’s essential for **signal processing** workflows (loading time-series data, telemetry, etc.).
+
+### Ownership (3 rules)
+1) **Each value has a single owner.**  
+   The binding that “owns” a value is responsible for it.
+
+2) **Only one owner at a time.**  
+   Assigning or passing a non-`Copy` value **moves** ownership to the new binding; the old one becomes unusable.
+
+3) **When the owner goes out of scope, the value is dropped.**  
+   Destructors (`Drop`) run automatically at scope end.
+
+> Notes:  
+> • Types like `i32`, `bool`, `char` are `Copy` → assignment/args **duplicate** instead of move.  
+> • Heap-backed types (`String`, `Vec<T>`, etc.) move by default; clone only when you truly need two owned copies.  
+
+### References / Borrowing (2 rules)
+1) **At any time: either _any number of immutable_ borrows, or _exactly one mutable_ borrow.**  
+   (Alias-or-mutate, not both.)
+
+2) **References must always be valid.**  
+   A reference can’t outlive the data it points to (no dangling refs). The compiler enforces this via lifetimes.
