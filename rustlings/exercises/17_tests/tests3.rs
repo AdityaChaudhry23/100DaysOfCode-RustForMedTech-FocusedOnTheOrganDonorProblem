@@ -9,7 +9,11 @@ impl Rectangle {
         if width <= 0 || height <= 0 {
             // Returning a `Result` would be better here. But we want to learn
             // how to test functions that can panic.
-            panic!("Rectangle width and height must be positive");
+            if width <= 0{
+                panic!("Rectangle width must be positive");
+            }else {
+                panic!("Rectangle height must be positive");
+            }
         }
 
         Rectangle { width, height }
@@ -29,21 +33,25 @@ mod tests {
         // TODO: This test should check if the rectangle has the size that we
         // pass to its constructor.
         let rect = Rectangle::new(10, 20);
-        assert_eq!(todo!(), 10); // Check width
-        assert_eq!(todo!(), 20); // Check height
+        assert_eq!(rect.width, 10); // Check width
+        assert_eq!(rect.height, 20); // Check height
     }
 
     // TODO: This test should check if the program panics when we try to create
     // a rectangle with negative width.
     #[test]
+    #[should_panic(expected = "Rectangle width must be positive")]
     fn negative_width() {
-        let _rect = Rectangle::new(-10, 10);
+        //let _rect = Rectangle::new(-10, 10);
+        Rectangle::new(-10, 10);
     }
 
     // TODO: This test should check if the program panics when we try to create
     // a rectangle with negative height.
     #[test]
+    #[should_panic(expected = "Rectangle height must be positive")]
     fn negative_height() {
-        let _rect = Rectangle::new(10, -10);
+        //let _rect = Rectangle::new(10, -10);
+        Rectangle::new(10,- 10);
     }
 }
