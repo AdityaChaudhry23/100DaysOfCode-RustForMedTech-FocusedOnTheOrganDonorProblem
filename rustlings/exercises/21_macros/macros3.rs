@@ -6,7 +6,10 @@ mod macros {
             println!("Check out my macro!");
         };
     }
+        pub(crate) use my_macro;
 }
+
+    use macros::my_macro;
 
 fn main() {
     my_macro!();
